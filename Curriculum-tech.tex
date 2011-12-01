@@ -1,0 +1,205 @@
+% LaTeX file for resume 
+% This file uses the resume document class (res.cls)
+
+\documentclass[margin]{res}
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+%\usepackage{newcent}   % uses new century schoolbook postscript font  
+\topmargin=-0.5in  % start text higher on the page
+\setlength{\textheight}{10in} % increase text height to fit resume on 1 page
+\begin{document}  
+\name{Massimo Gengarelli}
+
+\address{Curriculum Vitae}
+                           
+                        
+\begin{resume}                        
+ 
+\section{Personal Informations}
+	\begin{ncolumn}{2}
+		\underline{First name}:		& 	Massimo \\
+		\underline{Last name}:		& 	Gengarelli \\
+		\underline{Residence}:		& 	Via Acquario, 73 -- 47900 Rimini (RN), ITALY \\
+		\underline{Born}:			& 	April 6th, 1986 \\
+		\underline{Marital status}:	& 	Single \\
+		\underline{Phone Number}:	& 	(+39) 338 - 2746525 \\
+		\underline{Email}:			& 	massimo.gengarelli@gmail.com 
+	\end{ncolumn}
+
+
+\section{Education}       
+From 2006 until 2011 \\
+\underline{Universit\`a degli studi ``Alma Mater Studiorum'' di Bologna} \\
+Bachelor of Science degree in \textbf{Computer Science} \\
+(Final Mark: 105/110, Avg Mark: 27/30) \\
+Thesis: ``ShockVM: design and realization of an heterogeneous cluster of
+virtual machines interfaced to a Web Application'' 
+\vspace{3 mm}
+
+Dal 2001 al 2006 \\
+\underline{Istituto Tecnico per il Turismo ``Marco Polo''} \\
+Diploma in Tourism (Final Mark: 86/100)
+ 
+\renewcommand{\labelitemi}{$\rightarrow$}
+\section{Computers' Skills}
+	\underline{Programming Languages}
+		\begin{itemize}
+			\item Advanced knowledge of procuderal/imperative languages (C)
+			\item Advanced knowledge of Object-oriented languages (Java, C\#, C++, Python)
+			\item Advanced knowledge of handling complex algorithms for manipulating
+				data structures
+			\item Good knowledge of functional languages (Scheme, Elisp, Common Lisp)
+			\item Good knowledge of typographic language \TeX (\LaTeX dialect)
+		\end{itemize}
+	
+	\underline{Development Environments}
+		\begin{itemize}
+			\item Advanced knowledge of the Eclipse IDE, used both for Java/J2EE and
+				C/C++
+			\item Advanced knowledge of Emacs and VI(m) editors
+			\item Basic knowledge of NetBeans IDE
+			\item Basic knowledge of Microsoft Visual Studio IDE
+		\end{itemize}
+
+	\underline{Web Development}
+		\begin{itemize}
+			\item Good knowledge of server-side languages (Ruby, PHP)
+			\item Good knowledge of client-side languages (Javascript)
+			\item Good knowledge of mark-up and styling languages (XML, HTML5, CSS3)
+			\item Advanced knowledge of various frameworks for developing rich web applications 
+				(Servlets/Faces, GWT)
+		\end{itemize}
+
+	\underline{Frameworks, libraries and SDK}
+		\begin{itemize}
+			\item Advanced knowledge of the ``Google Web Toolkit'' framework
+			\item Good knowledge of Android SDK
+			\item Good knowledge of the Qt framework
+			\item Good knowledge of the GTK+ framework
+			\item Good knowledge of the JDBC subset of classes for Java
+			\item Basic knowledge in developing kernels for embedded devices
+			\item Basic knowledge of the Boost libraries for C++
+		\end{itemize}
+
+	\underline{Software Engineering}
+		\begin{itemize}
+			\item Advanced knowledge of the Design Patterns' 
+			\item Good knowledge of the UML language
+		\end{itemize}
+
+	\underline{Operating Systems}
+		\begin{itemize}
+			\item Excellent knowledge of UNIX-based operating systems (BSD, GNU/Linux, Darwin/OSX)
+			\item Good knowledge of NT-based operating systems (Windows XP, Vista, 7, Server)
+		\end{itemize}
+	
+	\underline{Systems' Administration}
+		\begin{itemize}
+			\item Excellent skills in configuring domestic LANs
+			\item Excellent skills in installing and configuring various services commonly used
+			in clusters (LDAP, DNS, DHCP, NFS, MX, \ldots)
+			\item Good skills in configuring complex enterprise networks (VPNs, bridging, \ldots)
+		\end{itemize}
+
+\section{Foreign Languages} 
+\underline{English}: excellent written and spoken skills. Excellent knowledge of the technical 
+IT-related terms. \\
+\underline{French}: basic knowledges of the language. \\
+\underline{German}: basic knowledges of the language. \\
+ 
+
+\section{Professional Experiences}
+\underline{Informal Job} \\
+I've always been an active member of the opensource community. I've been developing ``amateur''-level
+applications for quite a few years now, using different languages (mostly C, C++ and C\#). I currently
+own a repository where I store most of my works at http://github.com/massix . \\
+\vspace{2mm}
+
+\underline{From 03/2009 until 10/2009} \\
+``Assistenza Informatica Rimini'' \\
+System Administrator and Web Developer. I've developed a Web Application to
+help the customers in choosing their Workstation-configuration.
+
+\section{Unrelated Seasonal Jobs}
+Summer 2006, 2007 and 2008 \\
+``Rose \& Crown Pub'' \\
+Waiter and barman, mostly night shifts.
+
+\section{Jobs Description}
+Following is a short list of some of the softwares I've developed for the opensource
+community. 
+\begin{itemize}
+	\item \underline{Sensitive} $\rightarrow$ http://github.com/massix/Sensitive \\
+	Sensitive is a mathematical suite written using \textbf{C++} along with the
+	Qt framework and Qwt technical widgets. It is formed up by two softwares
+	(Inversitive and Sensitive). The suite is entirely designed using the MVC
+	(``Model-View-Controller'') design pattern in order to separate the logic
+	of the software from the UI representation of the datas. The sources are
+	divided into several directories in order to have a better vision of the
+	whole project. The low-level parts of the project are called ``Renal'' and
+	``SensitiveProtocol'': the first one is a small library which contains the
+	algorithms that are being used to calculate the polynomial interpolations,
+	this part uses the ``Template Method'' design pattern in order to retrieve
+	the best algorithm for the datas provided by the user; while
+	``SensitiveProtocol'' is a library that allows a Sensitive's Client to send
+	datas over the network to another Sensitive's Client. The higher-level part
+	of the project contains the GUIs, some of the classes are designed using
+	the ``Singleton'' Design Pattern in order to avoid memory consumptions (in
+	fact, a single instance of the class is kept in memory). The whole suite is
+	licensed using the GPL v3+ license.
+
+	\item \underline{libholdem} $\rightarrow$ http://github.com/massix/libholdem \\
+	libholdem is a \textbf{C} library I'm developing in order to help other
+	developers create their own Poker games. While this is still far from being
+	complete, it shows how it's possible to bring the Object-oriented paradigm
+	to a programming language that doesn't know how to handle objects. By doing so,
+	it will be easy to create wrappers for higher-level languages.
+	
+	\item \underline{ShockVM} $\rightarrow$ http://github.com/massix/ShockVM \\
+	ShockVM (short for: ShockVM is an Heterogeneous Operating Cluster of KVMs
+	Virtual Machines) is part of a greater project which involves the creation
+	of ``virtually linked'' virtual machines. This part contains a Web
+	Interface written entirely in \textbf{Java} using the GWT's framework. The
+	application itself allows its users to easily create and use virtual
+	machines ``in the cloud'' by using only a full-html5 compliant web browser.
+	The users are also free to share their virtual machines with other users of
+	ShockVM. The application is actually deployed at the website
+	http://forse.v2.cs.unibo.it:8080/LiveVC. The project is licensed using the
+	GPL v3+ license.
+
+	\item \underline{VDEPN} $\rightarrow$ http://github.com/massix/vdepn \\
+	VDEPN (short for: VDEPN Does Extend Private Networking) is a graphical tool
+	written using \textbf{Vala} and the GTK+ framework. It uses the MVC design
+	pattern. The tool is intended to be used together with an opensource
+	software written by Prof. Renzo Davoli (``vde: virtual distributed
+	ethernet'') and helps its users to create their own VPNs.
+\end{itemize}
+
+Other softwares may be found at my Github's address (http://github.com/massix),
+the softwares presented above are just the ones I'm most proud of.
+
+
+
+\section{Additional Informations}
+Particularly good in team-working and handling projects with short deadlines.
+Excellent analythical and deductive skills especially when dealing with
+problems' solving. I'm open-minded and ready for any kind of job proposal as
+long as it's coherent and useful to my professional growing. \\
+Driving License. \\
+
+\underline{Hobbies and Passions}: programming, computers in general, embedded
+devices, mathematical and logical puzzles, chess, soccer and american football.
+
+\section{Availability}
+Immediate (except for the time required by an eventual relocation)
+
+\end{resume} 
+\end{document}
+
+
+
+
+
+
+
+
+
