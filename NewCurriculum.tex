@@ -1,0 +1,190 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Friggeri Resume/CV
+% XeLaTeX Template
+% Version 1.0 (5/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Adrien Friggeri (adrien@friggeri.net)
+% https://github.com/afriggeri/CV
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important notes:
+% This template needs to be compiled with XeLaTeX and the bibliography, if used,
+% needs to be compiled with biber rather than bibtex.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{friggeri-cv}
+
+\begin{document}
+
+\header{massimo}{gengarelli}{software developer} % Your name and current job title/field
+
+%----------------------------------------------------------------------------------------
+%	SIDEBAR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{aside} % In the aside, each new line forces a line break
+  \section{contact}
+  1260 avenue Jules Grec
+  Antibes, Alpes-Maritimes
+  06600 (France)
+  ~
+  +33 (0)6.43.87.57.67
+  ~
+  \href{mailto:massimo.gengarelli@gmail.com}{massimo.gengarelli@gmail.com}
+  \href{http://github.com/massix/}{http://github.com/massix}
+  \href{http://facebook.com/massimo.gengarelli}{facebook}
+  \href{http://fr.linkedin.com/pub/massimo-gengarelli/46/375/468/}{linkedin}
+  \section{languages}
+  italian | mother tongue
+  english | fluent
+  french  | fluent
+  \section{programming}
+  C++, C, Clojure, Python,
+  Vala, Java, Objective-C
+  \section{environments}
+  GNU/Linux, Mac OS X
+  \section{softwares}
+  gcc, leiningen, Emacs,
+  VI(m), git, bzr
+\end{aside}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{education}
+
+\begin{entrylist}
+  %------------------------------------------------
+  \entry
+      {2006--2011}
+      {Bachelor {\normalfont of Science}}
+      {Universit\`a di Bologna, Italy}
+      {\emph{ShockVM: an heterogeneous cluster of virtual machines for the Web}
+        \\
+        The thesis explored the idea of a remote-spawnable cluster of virtual
+        machines entirely controlled through a web application.  The
+        technologies used were mainly based on KVM modules (C) and NoVNC.}
+      %------------------------------------------------
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{experience}
+
+\begin{entrylist}
+  \entry
+      {2006--now}
+      {Free Open Source Software Developer}
+      {Everywhere, world}
+      {\emph{Hobbyist developer \& hacker} \\
+        Since the very beginning of my studies and even something before, I've
+        always been a passionate developer and hacker.  I've participated in a
+        lot of opensource projects sometimes as the ``creator'', most of the
+        times as a ``contributor'', sometimes as a simple translator.}
+      %------------------------------------------------
+\end{entrylist}
+
+\begin{entrylist}
+  \entry
+      {2014--now}
+      {Alten Consultant for Orange}
+      {Sophia Antipolis, France}
+      {\emph{Backfill software Engineer} \\
+        As part of the development team handling all the logic behind the
+        Orange's search engine at \href{http://lemoteur.fr}{lemoteur.fr}, we're
+        constantly improving our algorithms in order to provide the best answers
+        for the users' queries.  Our team covers all the logical processes
+        starting from the crawling up to the creation of a responses' list for a
+        given query. \\
+        The development follows a classical V-style model with automated
+        deployment. \\
+        Skills: \emph{C++11}, \emph{NoSQL}, \emph{TCL}, \emph{Boost.Asio},
+        \emph{Chef}, \emph{GNU Autotools}, \emph{Ubuntu}
+      }
+      %------------------------------------------------
+\end{entrylist}
+
+\begin{entrylist}
+  \entry
+      {2012--2014}
+      {Alten Consultant for Amadeus}
+      {Sophia Antipolis, France}
+      {\emph{Ticketing and Fare Elements} \\
+        As a member of the Ticketing department in Amadeus, my team was
+        responsible of decommissioning the old IBM platform (TPF) in favor of a
+        distributed, modern one using a frontend/backend design with traffic
+        balancing. \\
+        During the two years I had the pleasure to work on a lot of
+        different and interesting projects, among which:
+        \begin{itemize}
+        \item \emph{Shadow Platform} a backend querying the old and the new
+          platforms at the same time, producing offline statistics to check the
+          different behaviors.
+        \item \emph{Customer's Server Interface} a backend capable to query a
+          remote dislocated server providing real-time information based on the
+          customer's needs.
+        \end{itemize}
+        Achievements: \emph{Development quality coordinator}, I've been in
+        charge of handling the quality of the development process within the
+        context of the department I was working on. I've helped setting up some
+        tools aiming at speeding and easing the whole deployment process. \\
+        I was also in charge of the ``Agile migration'' and I've covered the
+        role of SCRUM master during the process. \\
+        Skills: \emph{C++}, \emph{GNU/Linux}, \emph{EDIFact}, \emph{HLASM},
+        \emph{Boost}
+      }
+      %------------------------------------------------
+\end{entrylist}
+
+\begin{entrylist}
+  \entry
+      {2009}
+      {Assistenza Informatica}
+      {Rimini, Italy}
+      {\emph{Web Developer \& System Administrator}}
+      %------------------------------------------------
+\end{entrylist}
+%----------------------------------------------------------------------------------------
+%	PROJECTS
+%----------------------------------------------------------------------------------------
+
+\section{projects}
+
+%% \begin{entrylist}
+  %% %------------------------------------------------
+  %% \entry
+  %%     {2011}
+  %%     {Project 1}
+  %%     {Project 1}
+  %%     {Presented the research I conducted for my Masters of Commerce degree.}
+  %%     %------------------------------------------------
+  %%     \entry
+  %%         {2010}
+  %%         {Poster}
+  %%         {Annual Business Conference, Oregon}
+  %%         {As part of the course work for BUS320, I created a poster analyzing several local businesses and presented this at a conference.}
+  %%         %------------------------------------------------
+%% \end{entrylist}
+%% 
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{interests}
+
+%% \textbf{professional:} data analysis, company profiling, risk analysis,
+%% economics, web design, web app creation, software design, marketing
+%% \textbf{personal:} piano, chess, cooking, dancing, running
+
+
+\end{document}
