@@ -25,6 +25,8 @@ $(TARGET): bd $(TARGET_MAINFILE) $(TEXFILES)
 	@cd $(BUILDDIR) && $(XELATEX) $(LATEXFLAGS) $(TARGET_MAINTEX) > /dev/null
 	@echo "Done"
 	@mv $(BUILDDIR)/$(TARGET) .
+
+open: $(TARGET)
 	@echo "Opening $(TARGET)"
 	@open $(TARGET)
 
