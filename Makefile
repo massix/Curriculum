@@ -1,36 +1,36 @@
-# Makefile per la tesi
+# Makefile Curriculum
 
-PDFLATEXFLAGS	=	--output-format=pdf -halt-on-error
-XELATEX   = /usr/texbin/xelatex
-BIBTEX		=	/usr/texbin/bibtex
+LATEXFLAGS		= -halt-on-error
+XELATEX			= xelatex
+BIBTEX			= bibtex
 
-NEWTARGET_MAINFILE = NewCurriculum.tex
-NEWTARGET_MAINTEX = $(NEWTARGET_MAINFILE:.tex=)
+TARGET_MAINFILE	= Curriculum.tex
+TARGET_MAINTEX	= $(TARGET_MAINFILE:.tex=)
+TARGET			= $(TARGET_MAINFILE:.tex=.pdf)
 
-IMAGES		=	res.cls friggeri-cv.cls
-NEWTARGET = NewCurriculum.pdf
-
-BUILDDIR	=	build
+TEMPLATES		= friggeri-cv.cls
+BUILDDIR		= build
 
 .PHONY: clean distclean bd
 
-# all: $(TARGET) $(ENG_TARGET) $(TECH_TARGET)
-all: $(NEWTARGET)
+all: $(TARGET)
 
 bd:
 	mkdir -p $(BUILDDIR)
 
-$(NEWTARGET): bd $(NEWTARGET_MAINFILE) $(TEXFILES)
-	cp $(NEWTARGET_MAINFILE) $(IMAGES) $(BUILDDIR)
-	cd $(BUILDDIR) && \
-	  $(XELATEX) $(PDFLATEXFLAGS) $(NEWTARGET_MAINTEX)
-	cd $(BUILDDIR) && \
-	  $(XELATEX) $(PDFLATEXFLAGS) $(NEWTARGET_MAINTEX)
-	mv $(BUILDDIR)/$(NEWTARGET) .
+$(TARGET): bd $(TARGET_MAINFILE) $(TEXFILES)
+	@cp $(TARGET_MAINFILE) $(TEMPLATES) $(BUILDDIR)
+	@echo "Creating $(TARGET)"
+	@cd $(BUILDDIR) && $(XELATEX) $(LATEXFLAGS) $(TARGET_MAINTEX) > /dev/null
+	@cd $(BUILDDIR) && $(XELATEX) $(LATEXFLAGS) $(TARGET_MAINTEX) > /dev/null
+	@echo "Done"
+	@mv $(BUILDDIR)/$(TARGET) .
+	@echo "Opening $(TARGET)"
+	@open $(TARGET)
 
 
 distclean: clean
-	rm -fr $(NEWTARGET)
+	rm -fr $(TARGET)
 
 clean:
 	rm -fr $(BUILDDIR)
