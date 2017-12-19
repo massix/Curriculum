@@ -48,7 +48,7 @@
 %%%%%%%%%
 
 \RequirePackage[quiet]{fontspec}
-\RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
+\RequirePackage{unicode-math}
 
 \newfontfamily\bodyfont[]{Helvetica Neue}
 \newfontfamily\thinfont[]{Helvetica Neue UltraLight}
@@ -277,14 +277,6 @@
     \newunit%
   }
   \par\vspace{0.3\baselineskip}
-}
-
-\DeclareNameFormat{author}{%
-  \small\addfontfeature{Color=lightgray}%
-  \ifblank{#3}{}{#3\space}#1%
-  \ifthenelse{\value{listcount}<\value{liststop}}
-    {\addcomma\space}
-    {}%
 }
 
 \newcommand{\printbibsection}[2]{

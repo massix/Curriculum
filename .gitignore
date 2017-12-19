@@ -1,3 +1,11 @@
+.vscode/
 .DS_*
 *.pdf
 build
+*.aux
+*.bcf
+*.fdb*
+*.fls
+*.log
+*.out
+*.xml

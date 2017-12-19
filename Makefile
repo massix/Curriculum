@@ -1,8 +1,9 @@
 # Makefile Curriculum
 
+LATEX_HOME		= /Library/TeX/texbin
 LATEXFLAGS		= -halt-on-error
-XELATEX			= xelatex
-BIBTEX			= bibtex
+XELATEX			= ${LATEX_HOME}/xelatex
+BIBTEX			= ${LATEX_HOME}/bibtex
 
 TARGET_MAINFILE	= Curriculum.tex
 TARGET_MAINTEX	= $(TARGET_MAINFILE:.tex=)
@@ -19,12 +20,12 @@ bd:
 	mkdir -p $(BUILDDIR)
 
 $(TARGET): bd $(TARGET_MAINFILE) $(TEXFILES)
-	@cp $(TARGET_MAINFILE) $(TEMPLATES) $(BUILDDIR)
-	@echo "Creating $(TARGET)"
-	@cd $(BUILDDIR) && $(XELATEX) $(LATEXFLAGS) $(TARGET_MAINTEX) > /dev/null
-	@cd $(BUILDDIR) && $(XELATEX) $(LATEXFLAGS) $(TARGET_MAINTEX) > /dev/null
-	@echo "Done"
-	@mv $(BUILDDIR)/$(TARGET) .
+	cp $(TARGET_MAINFILE) $(TEMPLATES) $(BUILDDIR)
+	echo "Creating $(TARGET)"
+	cd $(BUILDDIR) && $(XELATEX) $(LATEXFLAGS) $(TARGET_MAINTEX)
+	cd $(BUILDDIR) && $(XELATEX) $(LATEXFLAGS) $(TARGET_MAINTEX)
+	echo "Done"
+	mv $(BUILDDIR)/$(TARGET) .
 
 open: $(TARGET)
 	@echo "Opening $(TARGET)"
